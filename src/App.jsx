@@ -28,8 +28,8 @@ import {
 } from "lucide-react";
 import profileImage from "./images/profile.jpg";
 import dashboardImage from "./images/dashboard.png";
-import posvideo from "./images/POS.mp4";
-import datacleanImage from "./images/profile.jpg";
+import posImage from "./images/POS.png";
+import technicalImage from "./images/technical.png";
 import "./App.css";
 
 function App() {
@@ -125,12 +125,12 @@ function App() {
 
   const projects = [
     {
-      image: posvideo ,
-      type: "video",
+      image: posImage ,
+      type: "image",
       title: "Business Management & POS Application",
       category: "Software Development",
       description:
-        "A web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications.",
+        "A progressive-web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications. easy to navigate mobile ui and can be used to monitor business and increase it fficiency",
       tools: [
         "React",
         "TypeScript",
@@ -141,7 +141,7 @@ function App() {
       icon: <Code2 size={22} />,
     },
     {
-      image: "/images/technical-support.jpg",
+      image: technicalImage,
       type: "image",
       title: "Application Troubleshooting & API Support",
       category: "Technical Support",
@@ -173,9 +173,9 @@ function App() {
 },
      
     {
-      image: "/images/n8n-workflow.jpg",
-      title: "Workflow Automation",
-      category: "Automation",
+      image: "/images/j.jpg",
+      title: "sustomer suport project",
+      category: "support",
       description:
         "Exploring automated workflows that connect business processes, APIs and data sources to reduce repetitive manual tasks.",
       tools: [
