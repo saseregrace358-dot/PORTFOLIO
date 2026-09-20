@@ -171,25 +171,8 @@ function App() {
   ],
   icon: <Database size={22} />,
 },
-     
-    {
-      image: "/images/j.jpg",
-      title: "sustomer suport project",
-      category: "support",
-      description:
-        "Exploring automated workflows that connect business processes, APIs and data sources to reduce repetitive manual tasks.",
-      tools: [
-        "n8n",
-        "APIs",
-        "Google Sheets",
-        "Webhooks",
-        "Automation",
-      ],
-      icon: <Workflow size={22} />,
-    },
-  ];
-
-  const experience = [
+]
+   const experience = [
     {
       period: "Apr 2024 – Jul 2026",
       role: "Medical Assistant",
