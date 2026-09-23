@@ -30,6 +30,7 @@ import profileImage from "./images/profile.jpg";
 import dashboardImage from "./images/dashboard.png";
 import posImage from "./images/POS.png";
 import technicalImage from "./images/technical.png";
+import customerImage from "./images/customers.png";
 import "./App.css";
 
 function App() {
@@ -141,7 +142,7 @@ function App() {
       icon: <Code2 size={22} />,
     },
     {
-      image: technicalImage,
+      image: customerImage,
       type: "image",
       title: "Application Troubleshooting & API Support",
       category: "Technical Support",
