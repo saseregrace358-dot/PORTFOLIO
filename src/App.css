@@ -982,8 +982,12 @@ img {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 22px;
+}
+
+.projects-grid .project-card:last-child {
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
 .project-card {
@@ -1017,6 +1021,17 @@ img {
   background: var(--bg-soft);
 }
 
+.projects-grid .project-card:last-child .project-image-wrap {
+  height: auto;
+  aspect-ratio: 14 / 7;
+}
+
+.projects-grid .project-card:last-child .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .project-image {
   width: 100%;
   height: 100%;
