@@ -12,6 +12,7 @@ import {
   Github,
   GraduationCap,
   Headphones,
+  Headset,
   Mail,
   MapPin,
   Menu,
@@ -124,55 +125,74 @@ function App() {
     },
   ];
 
-  const projects = [
-    {
-      image: posImage ,
-      type: "image",
-      title: "Business Management & POS Application",
-      category: "Software Development",
-      description:
-        "A progressive-web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications. easy to navigate mobile ui and can be used to monitor business and increase it fficiency",
-      tools: [
-        "React",
-        "TypeScript",
-        "Python",
-        "FastAPI",
-        "PostgreSQL",
-      ],
-      icon: <Code2 size={22} />,
-    },
-    {
-      image: customerImage,
-      type: "image",
-      title: "Application Troubleshooting & API Support",
-      category: "Technical Support",
-      description:
-        "Hands-on troubleshooting of authentication, CORS, API method, database and deployment issues while developing and maintaining web applications.",
-      tools: [
-        "REST APIs",
-        "JWT",
-        "FastAPI",
-        "PostgreSQL",
-        "Debugging",
-      ],
-      icon: <Server size={22} />,
-    },
-    {
-  image: dashboardImage,
-  type: "image",
-  title: "Sales Performance Dashboard",
-  category: "Data & Analysis",
-  description:
-    "Practical work with structured data, spreadsheets, SQL, interactive Excel dashboard to analyze stationery sales across product categories and regions. It helps identify revenue patterns, compare regional performance, and turn raw sales data into clearer business insights.",
-  tools: [
-    "Excel",
-    "Data Analysis",
-    "Data Visualization",
-    "Reporting",
-  ],
-  icon: <Database size={22} />,
-},
-]
+ const projects = [
+  {
+    image: posImage,
+    type: "image",
+    title: "Business Management & POS Application",
+    category: "Software Development",
+    description:
+      "A web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications, with a simple interface for monitoring day-to-day business activities.",
+    tools: [
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+    ],
+    icon: <Code2 size={22} />,
+  },
+
+  {
+    image: technicalImage,
+    type: "image",
+    title: "Application Troubleshooting & API Support",
+    category: "Technical Support",
+    description:
+      "Hands-on troubleshooting of authentication, CORS, API method, database and deployment issues while developing and maintaining web applications.",
+    tools: [
+      "REST APIs",
+      "JWT",
+      "FastAPI",
+      "PostgreSQL",
+      "Debugging",
+    ],
+    icon: <Server size={22} />,
+  },
+
+  {
+    image: dashboardImage,
+    type: "image",
+    title: "Sales Performance Dashboard",
+    category: "Data & Analysis",
+    description:
+      "Practical work with structured data, spreadsheets and interactive Excel dashboards to analyze stationery sales across product categories and regions, helping turn raw sales data into clearer business insights.",
+    tools: [
+      "Excel",
+      "Data Analysis",
+      "Data Visualization",
+      "Reporting",
+    ],
+    icon: <Database size={22} />,
+  },
+
+  {
+    image: customerImage,
+    type: "image",
+    title: "Customer Feedback & Support Follow-Up",
+    category: "Customer Support",
+    description:
+      "Managed customer feedback received through online forms by organizing responses, categorizing issues, tracking follow-ups and documenting resolutions in a structured spreadsheet for easy review and action.",
+    tools: [
+      "Google Forms",
+      "Google Sheets",
+      "Data Entry",
+      "Email Support",
+      "Customer Follow-up",
+    ],
+    icon: <Headset size={22} />,
+  },
+];
    const experience = [
     {
       period: "Apr 2024 – Jul 2026",
@@ -285,11 +305,12 @@ function App() {
             ))}
 
             <a
-              href="/Grace-Bamidele-Sasere-CV.pdf"
+               href="/GRACE_BAMIDELE_SASERE_CUSTOMER SUPPORT CV.pdf"
               className="nav-cv"
               target="_blank"
               rel="noreferrer"
             >
+              
               <Download size={16} />
               CV
             </a>
@@ -607,11 +628,10 @@ function App() {
             </div>
 
             <div className="projects-intro">
-              <p>
-                A selection of software, troubleshooting, data and automation
-                work that demonstrates how I approach practical technical
-                problems.
-              </p>
+             <p>
+                 A selection of practical work with screenshots, showing how I approach real tasks,
+                organize information and solve problems,
+                 </p> 
             </div>
 
             <div className="projects-grid">
