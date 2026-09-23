@@ -405,7 +405,7 @@ function App() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/grace-sasere/"
+                  href="https://www.linkedin.com/in/grace-sasere"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
