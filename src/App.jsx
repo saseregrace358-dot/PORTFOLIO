@@ -21,9 +21,8 @@ import {
   Search,
   Server,
   Settings,
-  ShieldCheck,
+  ChevronDown,
   Sun,
-  UserRound,
   Workflow,
   X,
 } from "lucide-react";
@@ -37,6 +36,7 @@ import "./App.css";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme");
@@ -68,6 +68,7 @@ function App() {
     { label: "Projects", id: "projects" },
     { label: "Experience", id: "experience" },
     { label: "Contact", id: "contact" },
+    
   ];
 
   const scrollToSection = (id) => {
@@ -103,46 +104,30 @@ function App() {
   ];
 
   const services = [
-    {
-      icon: <Headphones size={24} />,
-      title: "Technical Support",
-      text: "Investigating application issues, authentication problems, API errors and other technical issues while keeping communication clear and practical.",
-    },
-    {
-      icon: <BriefcaseBusiness size={24} />,
-      title: "Customer & Operations Support",
-      text: "Handling day-to-day requests, follow-ups, records, coordination and operational tasks with attention to accuracy and completion.",
-    },
-    {
-      icon: <Database size={24} />,
-      title: "Data & Reporting",
-      text: "Working with spreadsheets, structured information, data verification, documentation and reporting to keep information reliable and useful.",
-    },
-    {
-      icon: <Workflow size={24} />,
-      title: "Workflow Automation",
-      text: "Building practical workflows with APIs, n8n, Google Sheets and software integrations to reduce repetitive work.",
-    },
-  ];
+  {
+    icon: <Headphones size={24} />,
+    title: "Technical Support",
+    text: "Investigating application issues, authentication problems, API errors and other technical issues while keeping communication clear and practical.",
+  },
+  {
+    icon: <BriefcaseBusiness size={24} />,
+    title: "Customer & Operations Support",
+    text: "Handling customer requests, follow-ups, records, coordination and day-to-day operational tasks with attention to accuracy and completion.",
+  },
+  {
+    icon: <Database size={24} />,
+    title: "Data & Reporting",
+    text: "Working with spreadsheets, structured information, data verification, documentation and reporting to keep information accurate and useful.",
+  },
+  {
+    icon: <Workflow size={24} />,
+    title: "Administrative Support",
+    text: "Managing records, documents, schedules and routine administrative tasks while keeping information organized and following up on outstanding issues.",
+  },
+];
 
  const projects = [
-  {
-    image: posImage,
-    type: "image",
-    title: "Business Management & POS Application",
-    category: "Software Development",
-    description:
-      "A web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications, with a simple interface for monitoring day-to-day business activities.",
-    tools: [
-      "React",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-    ],
-    icon: <Code2 size={22} />,
-  },
-
+  
   {
     image: technicalImage,
     type: "image",
@@ -161,20 +146,22 @@ function App() {
   },
 
   {
-    image: dashboardImage,
+    image: posImage,
     type: "image",
-    title: "Sales Performance Dashboard",
-    category: "Data & Analysis",
+    title: "Business Management & POS Application",
+    category: "Software Development",
     description:
-      "Practical work with structured data, spreadsheets and interactive Excel dashboards to analyze stationery sales across product categories and regions, helping turn raw sales data into clearer business insights.",
+      "A web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications, with a simple interface for monitoring day-to-day business activities.",
     tools: [
-      "Excel",
-      "Data Analysis",
-      "Data Visualization",
-      "Reporting",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
     ],
-    icon: <Database size={22} />,
+    icon: <Code2 size={22} />,
   },
+
 
   {
     image: customerImage,
@@ -192,6 +179,26 @@ function App() {
     ],
     icon: <Headset size={22} />,
   },
+
+  
+  {
+    image: dashboardImage,
+    type: "image",
+    title: "Sales Performance Dashboard",
+    category: "Data & Analysis",
+    description:
+      "Practical work with structured data, spreadsheets and interactive Excel dashboards to analyze stationery sales across product categories and regions, helping turn raw sales data into clearer business insights.",
+    tools: [
+      "Excel & Google Sheets",
+      "Data Entry & Verification",
+      "Data Visualization",
+      "Data handling",
+      "Reporting",
+      
+    ],
+    icon: <Database size={22} />,
+  },
+
 ];
    const experience = [
     {
@@ -304,16 +311,42 @@ function App() {
               </button>
             ))}
 
-            <a
-               href="/GRACE_BAMIDELE_SASERE_CUSTOMER SUPPORT CV.pdf"
+          <div className={`nav-cv-wrapper ${cvOpen ? "open" : ""}`}>
+            <button
+              type="button"
               className="nav-cv"
-              target="_blank"
-              rel="noreferrer"
+              onClick={() => setCvOpen(!cvOpen)}
+              aria-expanded={cvOpen}
+              aria-haspopup="true"
             >
-              
               <Download size={16} />
               CV
-            </a>
+              <ChevronDown
+                size={15}
+                className="cv-chevron"
+              />
+            </button>
+
+            <div className="cv-dropdown">
+              <a
+                href="/GRACE_BAMIDELE_SASERE_TECHNICAL_SUPPORT_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setCvOpen(false)}
+              >
+                Technical Customer Support CV
+              </a>
+
+              <a
+                href="/GRACE_BAMIDELE_SASERE_OPERATIONS_CUSTOMER_SUPPORT_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setCvOpen(false)}
+              >
+                Operations & Customer Support CV
+              </a>
+            </div>
+          </div>
           </nav>
 
           <div className="nav-actions">
@@ -360,12 +393,13 @@ function App() {
                 <span>Sasere</span>
               </h1>
 
-              <h2>Technical Customer Support & Operations</h2>
+              
 
-              <p className="hero-focus">
-                Customer Support <span>•</span> Operations <span>•</span> Data{" "}
-                <span>•</span> Software Support
-              </p>
+              <h2 className="hero-focus">
+                Technical Customer Support & Operations
+                <p>Customer Support <span>•</span> Operations <span>•</span> Data{" "}
+                <span>•</span> Software Support </p>
+              </h2>
 
               <p className="hero-description">
                 I have experience working with people, information, electronic
@@ -440,14 +474,14 @@ function App() {
                   <p className="profile-label">Based in</p>
                   <div className="profile-location">
                     <MapPin size={17} />
-                    Nigeria · Remote
+                    Nigeria · Available for remote opportunities
                   </div>
 
                   <div className="profile-divider" />
 
                   <p className="profile-label">Focus</p>
                   <p className="profile-focus">
-                    Technical support, operations, data and software
+                    Technical customers support, operations, data and software
                     troubleshooting.
                   </p>
                 </div>
@@ -493,33 +527,14 @@ function App() {
                     <MapPin size={19} />
                   </div>
 
-                  <div>
-                    <strong>Nigeria</strong>
-                    <span>Available for remote opportunities</span>
-                  </div>
-                </div>
-
-                <div className="meta-item">
-                  <div className="meta-icon">
-                    <BriefcaseBusiness size={19} />
-                  </div>
-
-                  <div>
-                    <strong>Open to</strong>
-                    <span>Support, Operations & Data Roles</span>
-                  </div>
-                </div>
-
-                <div className="meta-item">
-                  <div className="meta-icon">
-                    <ShieldCheck size={19} />
-                  </div>
-
+                  
                   <div>
                     <strong>Work style</strong>
                     <span>Accurate, responsive and solution-focused</span>
                   </div>
+
                 </div>
+                
               </div>
             </div>
           </div>
@@ -629,8 +644,8 @@ function App() {
 
             <div className="projects-intro">
              <p>
-                 A selection of practical work with screenshots, showing how I approach real tasks,
-                organize information and solve problems,
+                 A selection of practical work with screenshots, showing how I handle technical,
+                 customer support, data and operational tasks.,
                  </p> 
             </div>
 
@@ -844,10 +859,6 @@ function App() {
                     <MapPin size={19} />
                   </div>
 
-                  <div>
-                    <span>Location</span>
-                    <strong>Nigeria · Remote</strong>
-                  </div>
                 </div>
               </div>
             </div>

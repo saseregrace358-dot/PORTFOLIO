@@ -311,6 +311,248 @@ img {
   gap: 8px;
 }
 
+/* =========================
+   CV NAVIGATION DROPDOWN
+========================= */
+
+.nav-cv-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* =========================
+   CV BUTTON
+========================= */
+
+.nav-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: none;
+  background: transparent;
+
+  font: inherit;
+  color: inherit;
+
+  cursor: pointer;
+
+  padding: 8px 10px;
+  border-radius: 5px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-cv:hover {
+  background: var(--soft-blue);
+}
+
+
+/* Chevron */
+
+.cv-chevron {
+  transition: transform 0.2s ease;
+}
+
+.nav-cv-wrapper.open .cv-chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+
+.cv-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 245px;
+
+  padding: 0;
+
+  background: var(--card-bg);
+
+  /* OUTER BORDER */
+  border: 1px solid #75acdb;
+  
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.nav-cv-wrapper.open .cv-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   CV OPTIONS
+========================= */
+
+.cv-dropdown a {
+  display: block;
+
+  padding: 12px 14px;
+
+  color: var(--text);
+  text-decoration: none;
+
+  font-size: 0.88rem;
+  line-height: 1.4;
+
+  background: transparent;
+
+  border: none;
+}
+
+/* First CV */
+.cv-dropdown a:first-child {
+  background:  #8db7e4;;
+}
+
+
+/* Second CV */
+.cv-dropdown a:last-child {
+  background:  #7ea0e6;;
+}
+
+/* =========================
+   FULL-WIDTH DIVIDER
+========================= */
+
+.cv-dropdown a + a {
+  border-top: 2px solid #0f1011;
+}
+
+
+
+/* =========================
+   CV HOVER
+========================= */
+
+.cv-dropdown a:hover {
+  background: var(--soft-blue);
+  color: var(--blue);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-cv-wrapper {
+    width: 100%;
+    display: block;
+  }
+
+
+  /* CV button */
+
+  .nav-cv {
+    width: 100%;
+    justify-content: flex-start;
+
+    padding: 12px 0;
+  }
+
+
+  /* Dropdown */
+
+  .cv-dropdown {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 4px;
+    padding: 4px 0;
+
+    /* KEEP OUTER BORDER */
+    border: 1px solid #75acdb;
+    border-radius: 10px;
+
+    box-shadow: none;
+
+    background: var(--card-bg);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: none;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+      max-height 0.25s ease,
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+ /* First CV */
+.cv-dropdown a:first-child {
+  background:  #8db7e4;;
+}
+
+
+/* Second CV */
+.cv-dropdown a:last-child {
+  background:  #7ea0e6;;
+}
+
+
+  /* Open */
+
+  .nav-cv-wrapper.open .cv-dropdown {
+    opacity: 1;
+    visibility: visible;
+
+    max-height: 180px;
+  }
+
+
+  /* CV options */
+
+  .cv-dropdown a {
+    padding: 10px 12px 10px 20px;
+
+    font-size: 0.86rem;
+  }
+
+
+  /* Middle dividing line */
+
+  .cv-dropdown a + a {
+  border-top: 2px solid #75acdb;
+}
+.cv-dropdown a:hover {
+  background: var(--soft-blue);
+  color: var(--blue);
+}
+
+}
 .theme-toggle,
 .mobile-menu {
   width: 38px;
@@ -758,6 +1000,7 @@ img {
 
   font-size: 0.76rem;
 }
+
 
 /* =========================================================
    SERVICES
@@ -1658,7 +1901,7 @@ a:focus-visible {
   .hero-container {
     grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.75fr);
 
-    gap: 45px;
+    gap: 75px;
   }
 
   .services-grid {
