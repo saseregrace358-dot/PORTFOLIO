@@ -381,10 +381,7 @@ function App() {
         <section id="home" className="hero section">
           <div className="hero-container">
             <div className="hero-content">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                Available for remote opportunities
-              </div>
+              
 
               <p className="hero-intro">Hello, I'm</p>
 
@@ -396,10 +393,11 @@ function App() {
               
 
               <h2 className="hero-focus">
-                Technical Customer Support & Operations
-                <p>Customer Support <span>•</span> Operations <span>•</span> Data{" "}
-                <span>•</span> Software Support </p>
+               Technical Customer Support | Operations | Data | Software Support
+                
               </h2>
+              
+            
 
               <p className="hero-description">
                 I have experience working with people, information, electronic
