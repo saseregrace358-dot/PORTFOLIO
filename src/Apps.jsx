@@ -88,7 +88,7 @@ function App() {
     "Technical Support",
     "Customer Support",
     "Operations Support",
-    "Problem Solving",
+    "Git & GitHub",
     "Data Entry & Verification",
     "Documentation & Records",
     "Email & Chat Support",
@@ -99,7 +99,7 @@ function App() {
     "SQL",
     "React",
     "FastAPI & REST APIs",
-    "Git & GitHub",
+    
   ];
 
   const services = [
