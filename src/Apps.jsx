@@ -95,11 +95,10 @@ function App() {
     "Scheduling & Follow-up",
     "Excel & Google Sheets",
     "Python",
-    "JavaScript / TypeScript",
+    "JavaScript",
     "SQL",
     "React",
     "FastAPI & REST APIs",
-    "n8n Automation",
     "Git & GitHub",
   ];
 
