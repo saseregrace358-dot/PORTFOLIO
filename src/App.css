@@ -2218,9 +2218,16 @@ a:focus-visible {
     align-items: flex-start;
   }
 
-  .skill-pill {
-    width: 100%;
-  }
+  .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.skill-pill {
+  width: 100%;
+  justify-content: flex-start;
+}
 
   .project-image-wrap {
     height: 175px;
