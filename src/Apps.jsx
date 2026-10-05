@@ -89,16 +89,18 @@ function App() {
     "Customer Support",
     "Operations Support",
     "Git & GitHub",
+    "Python",
+    "JavaScript",
+    "SQL",
+    "React",
     "Data Entry & Verification",
     "Documentation & Records",
     "Email & Chat Support",
     "Scheduling & Follow-up",
     "Excel & Google Sheets",
-    "Python",
-    "JavaScript",
-    "SQL",
-    "React",
     "FastAPI & REST APIs",
+    
+    
     
   ];
 
