@@ -84,25 +84,39 @@ function App() {
     setMenuOpen(false);
   };
 
-  const skills = [
-    "Technical Support",
-    "Customer Support",
-    "Operations Support",
-    "Git & GitHub",
-    "Python",
-    "JavaScript",
-    "SQL",
-    "React",
-    "Data Entry & Verification",
-    "Documentation & Records",
-    "Email & Chat Support",
-    "Scheduling & Follow-up",
-    "Excel & Google Sheets",
-    "FastAPI & REST APIs",
-    
-    
-    
-  ];
+  const skillGroups = [
+  {
+    title: "Support & Operations",
+    skills: [
+      "Technical Support",
+      "Customer Support",
+      "Operations Support",
+      "Problem Solving",
+      "Email & Chat Support",
+      "Scheduling & Follow-up",
+    ],
+  },
+  {
+    title: "Data & Administration",
+    skills: [
+      "Data Entry & Verification",
+      "Documentation & Records",
+      "Excel & Google Sheets",
+      "Data Reporting",
+    ],
+  },
+  {
+    title: "Technical",
+    skills: [
+      "Python",
+      "JavaScript",
+      "React",
+      "SQL",
+      "FastAPI & REST APIs",
+      "Git & GitHub",
+    ],
+  },
+];
 
   const services = [
   {
@@ -128,14 +142,13 @@ function App() {
 ];
 
  const projects = [
-  
   {
     image: technicalImage,
     type: "image",
     title: "Application Troubleshooting & API Support",
     category: "Technical Support",
     description:
-      "Hands-on troubleshooting of authentication, CORS, API method, database and deployment issues while developing and maintaining web applications.",
+      "A practical troubleshooting project focused on diagnosing authentication, CORS, API method, database and deployment issues while developing and testing web applications.",
     tools: [
       "REST APIs",
       "JWT",
@@ -150,9 +163,9 @@ function App() {
     image: posImage,
     type: "image",
     title: "Business Management & POS Application",
-    category: "Software Development",
+    category: "Software & Business Systems",
     description:
-      "A web-based business management and point-of-sale application covering sales, inventory, employees, expenses and notifications, with a simple interface for monitoring day-to-day business activities.",
+      "A business management and point-of-sale application built to manage sales, inventory, employees, expenses and notifications through one web-based system.",
     tools: [
       "React",
       "TypeScript",
@@ -163,14 +176,13 @@ function App() {
     icon: <Code2 size={22} />,
   },
 
-
   {
     image: customerImage,
     type: "image",
     title: "Customer Feedback & Support Follow-Up",
     category: "Customer Support",
     description:
-      "Managed customer feedback received through online forms by organizing responses, categorizing issues, tracking follow-ups and documenting resolutions in a structured spreadsheet for easy review and action.",
+      "A structured customer-support workflow using online forms and spreadsheets to organize feedback, categorize issues, track follow-ups and document resolutions.",
     tools: [
       "Google Forms",
       "Google Sheets",
@@ -181,27 +193,35 @@ function App() {
     icon: <Headset size={22} />,
   },
 
-  
   {
     image: dashboardImage,
     type: "image",
     title: "Sales Performance Dashboard",
-    category: "Data & Analysis",
+    category: "Data & Reporting",
     description:
-      "Practical work with structured data, spreadsheets and interactive Excel dashboards to analyze stationery sales across product categories and regions, helping turn raw sales data into clearer business insights.",
+      "An Excel dashboard that organizes stationery sales data by product category and region, making it easier to review performance and identify useful business information.",
     tools: [
-      "Excel & Google Sheets",
-      "Data Entry & Verification",
+      "Excel",
+      "Google Sheets",
+      "Data Verification",
       "Data Visualization",
-      "Data handling",
       "Reporting",
-      
     ],
     icon: <Database size={22} />,
   },
-
 ];
+
    const experience = [
+    {
+        period: "Ongoing",
+        role: "Independent Software Projects",
+        company: "Self-directed Projects & Technical Development",
+        points: [
+          "Build and troubleshoot web applications using React, JavaScript, Python, FastAPI and PostgreSQL.",
+          "Work with REST APIs, authentication, databases, deployment and application debugging.",
+          "Build practical projects around business operations, data handling and software workflows.",
+        ],
+      },
     {
       period: "Apr 2024 – Jul 2026",
       role: "Medical Assistant",
@@ -215,38 +235,29 @@ function App() {
       ],
     },
     {
-      period: "Nov 2021 – Nov 2022",
-      role: "Science Laboratory Assistant — NYSC",
-      company:
-        "Federal College of Education (Special), Oyo State, Nigeria",
-      points: [
-        "Supported laboratory schedules, materials and day-to-day activities.",
-        "Handled communication and follow-up with students and staff.",
-        "Provided assistance with both online and in-person requests.",
-        "Maintained organized records and helped keep activities running smoothly.",
-      ],
-    },
+        period: "Nov 2021 – Nov 2022",
+        role: "Science Laboratory Assistant — NYSC",
+        company:
+          "Federal College of Education (Special), Oyo State, Nigeria",
+        points: [
+          "Supported laboratory schedules, materials and day-to-day activities.",
+          "Handled requests and follow-up with students and staff.",
+          "Provided assistance with both online and in-person requests.",
+          "Maintained organized records and helped keep daily activities running smoothly.",
+        ],
+      },
     {
-      period: "Sept 2020 – Aug 2021",
-      role: "Administrative Support Intern",
-      company: "Primary Health Care Centre",
-      points: [
-        "Maintained equipment and administrative records.",
-        "Reported issues and followed up on technical or operational requests.",
-        "Assisted with documentation and routine administrative tasks.",
-        "Helped keep information organized and accessible for day-to-day work.",
-      ],
-    },
-    {
-      period: "Ongoing",
-      role: "Full-Stack Developer — Independent Projects",
-      company: "Software Development & Technical Learning",
-      points: [
-        "Build and troubleshoot web applications using React, JavaScript, Python, FastAPI and PostgreSQL.",
-        "Work with REST APIs, authentication, databases, deployment and application debugging.",
-        "Build practical projects focused on business operations, automation and data handling.",
-      ],
-    },
+        period: "Sept 2020 – Aug 2021",
+        role: "Administrative Support Intern",
+        company: "Primary Health Care Centre",
+        points: [
+          "Maintained equipment and administrative records.",
+          "Reported issues and followed up on technical or operational requests.",
+          "Assisted with documentation and routine administrative tasks.",
+          "Helped keep information organized and accessible for day-to-day work.",
+        ],
+      },
+    
   ];
 
   const education = [
@@ -394,7 +405,7 @@ function App() {
               
 
               <h2 className="hero-focus">
-               Technical Customer Support | Operations | Data | Software Support
+               Technical Support Specialist | Customer Support | Software & Data
                 
               </h2>
               
@@ -403,10 +414,9 @@ function App() {
               <p className="hero-description">
                 I have experience working with people, information, electronic
                 systems and day-to-day operations, with a growing technical
-                background in software and web applications. I enjoy
-                investigating problems, keeping information accurate,
-                following up on issues and finding practical ways to get work
-                moving again.
+                background in software and web applications. My background includes working with records, spreadsheets and operational
+                tasks, alongside hands-on experience troubleshooting web applications, APIs and databases.
+               
               </p>
 
               <div className="hero-actions">
@@ -480,9 +490,9 @@ function App() {
 
                   <p className="profile-label">Focus</p>
                   <p className="profile-focus">
-                    Technical customers support, operations, data and software
-                    troubleshooting.
-                  </p>
+                      Technical support, customer support, operations, data and software
+                      troubleshooting.
+                    </p>
                 </div>
               </div>
             </div>
@@ -506,17 +516,17 @@ function App() {
             <div className="about-summary-grid">
               <div className="about-summary-text">
                 <p>
-                  My background combines customer-facing support,
-                  administration, data handling and technology. I've worked
-                  with electronic records, documentation, spreadsheets and
-                  operational processes, while also developing practical
-                  skills in software development and troubleshooting.
+                  My background combines customer support, administration, data handling
+                  and technology. I've worked with electronic records, documentation,
+                  spreadsheets and day-to-day operational processes while developing
+                  practical skills in software development and technical troubleshooting.
                 </p>
 
-                <p>
-                  I enjoy understanding what is causing a problem,
-                  communicating clearly with the people involved and following
-                  an issue through until there is a practical next step.
+                 <p>
+                  I enjoy understanding what is causing a problem, communicating clearly
+                  with the people involved and following an issue through to a practical
+                  solution. My goal is to bring that same approach to technical support,
+                  customer support and operations roles.
                 </p>
               </div>
 
@@ -593,7 +603,7 @@ function App() {
             <div className="section-heading">
               <div>
                 <span className="section-kicker">Skills & tools</span>
-                <h2>Technical and operational skills.</h2>
+                <h2>Skills I use to solve practical problems.</h2>
               </div>
 
               <span className="section-number">03</span>
@@ -605,24 +615,32 @@ function App() {
                   <Settings size={25} />
                 </div>
 
-                <h3>A combination of support and technology.</h3>
+                <h3>Support experience backed by practical technical skills.</h3>
 
                 <p>
-                  I bring practical experience with records, operations,
-                  communication and customer-facing work alongside hands-on
-                  technical skills in web development, APIs, databases and
-                  automation.
+                  My strongest skills are built around supporting people, keeping
+                  information accurate and solving practical problems. I also use
+                  technical tools to troubleshoot applications, work with data and
+                  understand how software systems work.
                 </p>
               </div>
 
-              <div className="skills-list">
-                {skills.map((skill) => (
-                  <span className="skill-pill" key={skill}>
-                    <CheckCircle2 size={15} />
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              <div className="skills-groups">
+              {skillGroups.map((group) => (
+                <div className="skill-group" key={group.title}>
+                  <h3>{group.title}</h3>
+
+                  <div className="skills-list">
+                    {group.skills.map((skill) => (
+                      <span className="skill-pill" key={skill}>
+                        <CheckCircle2 size={15} />
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
             </div>
           </div>
         </section>
@@ -635,7 +653,7 @@ function App() {
             <div className="section-heading">
               <div>
                 <span className="section-kicker">Selected work</span>
-                <h2>Projects that show how I solve problems.</h2>
+                <h2>Practical projects that show how I work.</h2>
               </div>
 
               <span className="section-number">04</span>
@@ -643,7 +661,7 @@ function App() {
 
             <div className="projects-intro">
              <p>
-                 A selection of practical work with screenshots, showing how I handle technical,
+                 A selection of practical work with screenshots, showing how I approach technical problems,
                  customer support, data and operational tasks.,
                  </p> 
             </div>
@@ -715,7 +733,7 @@ function App() {
             <div className="section-heading">
               <div>
                 <span className="section-kicker">Experience</span>
-                <h2>Experience built across support, operations and technology.</h2>
+                <h2>Experience across support, operations and technology.</h2>
               </div>
 
               <span className="section-number">05</span>
@@ -795,14 +813,12 @@ function App() {
                 <span className="section-kicker">Let's connect</span>
 
                 <h2>
-                  Looking for someone who can combine support with technical
-                  problem-solving?
+                  Need someone who can support people, solve problems and keep work moving?
                 </h2>
 
                 <p>
-                  I'm open to remote opportunities in technical customer
-                  support, operations support, data-related roles and software
-                  support.
+                  I'm open to remote opportunities in technical support, customer support,
+                  operations support, data-related roles and software support.
                 </p>
 
                 <div className="contact-actions">
@@ -840,18 +856,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="contact-detail">
-                  <div className="contact-detail-icon">
-                    <Phone size={19} />
-                  </div>
-
-                  <div>
-                    <span>Phone</span>
-                    <a href="tel:+2348109761271">
-                      +234 810 976 1271
-                    </a>
-                  </div>
-                </div>
+                
 
                 <div className="contact-detail">
                   <div className="contact-detail-icon">
