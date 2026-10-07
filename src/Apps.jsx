@@ -212,16 +212,18 @@ function App() {
 ];
 
    const experience = [
-    {
-        period: "Ongoing",
-        role: "Independent Software Projects",
-        company: "Self-directed Projects & Technical Development",
-        points: [
-          "Build and troubleshoot web applications using React, JavaScript, Python, FastAPI and PostgreSQL.",
-          "Work with REST APIs, authentication, databases, deployment and application debugging.",
-          "Build practical projects around business operations, data handling and software workflows.",
-        ],
-      },
+   {
+      period: "Ongoing",
+      role: "Independent Software Projects",
+      company: "Self-directed Projects & Technical Development",
+      points: [
+        "Built a business management and POS application to manage sales, inventory, employees, expenses and business notifications.",
+        "Developed the application with React, TypeScript, Python, FastAPI and PostgreSQL, connecting the frontend to the backend through REST APIs.",
+        "Worked on features such as product and inventory management, sales tracking, employee records, expenses and business reporting.",
+        "Tested and troubleshot application issues, including API errors, database problems, authentication issues and frontend functionality.",
+        "Deployed and maintained the application while making improvements based on how the system works and the needs of a real business.",
+      ],
+    },
     {
       period: "Apr 2024 – Jul 2026",
       role: "Medical Assistant",
@@ -341,7 +343,7 @@ function App() {
 
             <div className="cv-dropdown">
               <a
-                href="/GRACE_BAMIDELE_SASERE_TECHNICAL_SUPPORT_CV.pdf"
+                href="/GRACE_BAMIDELE_SASERE_OPERATIONS AND ADMINISTRATIVE SUPPORT CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setCvOpen(false)}
@@ -350,7 +352,7 @@ function App() {
               </a>
 
               <a
-                href="/GRACE_BAMIDELE_SASERE_OPERATIONS_CUSTOMER_SUPPORT_CV.pdf"
+                href="/GRACE_BAMIDELE_SASERE_TECHNICAL AND CUSTOMER SUPPORT_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setCvOpen(false)}
@@ -913,12 +915,7 @@ function App() {
                 <ExternalLink size={18} />
               </a>
 
-              <a
-                href="mailto:sseun3568@gmail.com"
-                aria-label="Email"
-              >
-                <Mail size={18} />
-              </a>
+              
             </div>
           </div>
 
